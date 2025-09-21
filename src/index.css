@@ -118,6 +118,22 @@
   -webkit-text-fill-color: transparent;
 }
 
+.yellow-text-gradient {
+  background: #f7971e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #f7971e,
+    #ffd200
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #f7971e,
+    #ffd200
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;
@@ -205,4 +221,21 @@
       -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
+}
+
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 15px rgba(169, 102, 255, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(169, 102, 255, 0.9);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(169, 102, 255, 0.4);
+    }
+}
+
+/* This class applies the animation defined above */
+.pulse-glow {
+    animation: pulse-glow 4s infinite ease-in-out;
 }

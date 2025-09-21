@@ -1,11 +1,38 @@
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import profilePhoto from "../assets/profile-photo.jpg";
+import React, {useEffect, useState} from 'react';
 
 const Hero = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const controls = useAnimation();
 
-  
+  // Scroll event listener
+  useEffect(() => {
+    const handleScroll = () => {
+      // Set a threshold, e.g., when the user scrolls 100px down
+      if (window.scrollY > 100) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+  }, []);
+
+   const buttonGroupVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } },
+  };
+
+  const buttonVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -25,14 +52,25 @@ const Hero = () => {
             interfaces and web applications
           </p>
         </div>
+        
       </div>
-
+      {/* Profile Picture */}
+      <div className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 justify-end`}>
+        <div className={styles.profilePicContainer}>
+          <img 
+            src={profilePhoto} 
+            alt="Profile" 
+            className={styles.profilePicImage} 
+          />
+        </div>
+      </div>
+      <br /><br /><br />
       <ComputersCanvas />
 
       
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
-        <a href='#about'>
+        {/* <a href='#about'>
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
             <motion.div
               animate={{
@@ -46,7 +84,7 @@ const Hero = () => {
               className='w-3 h-3 rounded-full bg-secondary mb-1'
             />
           </div>
-        </a>
+        </a> */}
       </div>
     </section>
   );

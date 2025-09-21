@@ -36,7 +36,7 @@ import {
 
 
 // Import Tekisky separately
-import tekisky from "../assets/company/tekisky.png";
+import Srishti from "../assets/company/sristi.png";
 
 
 export const navLinks = [
@@ -93,52 +93,52 @@ const technologies = [
     name: "React JS",
     icon: reactjs,
   },
-  {
-    name: "gsap",
-    icon: gsap,
-  },
-  {
-    name: "framer",
-    icon: framer,
-  },
+  // {
+  //   name: "gsap",
+  //   icon: gsap,
+  // },
+  // {
+  //   name: "framer",
+  //   icon: framer,
+  // },
 
  
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
+  // {
+  //   name: "Three JS",
+  //   icon: threejs,
+  // },
+  // {
+  //   name: "figma",
+  //   icon: figma,
+  // },
+  // {
+  //   name: "Redux Toolkit",
+  //   icon: redux,
+  // },
   {
     name: "Tailwind CSS",
     icon: tailwind,
   },
-  {
-    name: "Material Ui",
-    icon: mui,
-  },
+  // {
+  //   name: "Material Ui",
+  //   icon: mui,
+  // },
   {
     name: "Node JS",
     icon: nodejs,
   },
-  {
-    name: "Express Js",
-    icon: express,
-  },
-  {
-    name: "AWS",
-    icon: aws,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
+  // {
+  //   name: "Express Js",
+  //   icon: express,
+  // },
+  // {
+  //   name: "AWS",
+  //   icon: aws,
+  // },
+  // {
+  //   name: "MongoDB",
+  //   icon: mongodb,
+  // },
   {
     name: "MySql",
     icon: mysql,
@@ -155,8 +155,8 @@ const technologies = [
 const experiences = [
   {
     title: "Full-Stack Developer",
-    company_name: "Tekisky",
-    icon: tekisky,
+    company_name: "Srishti Innovative",
+    icon: Srishti,
     iconBg: "#383E56",
     date: "May 2025 - present",
     points: [
@@ -187,7 +187,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "After ajmal optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "After Ajmal optimized our website, our traffic increased by 50%. We can't thank them enough!",
     name: "James Wang",
     designation: "CTO",
     company: "456 Enterprises",
@@ -202,7 +202,7 @@ const projects = [
       "A web-based platform that allows users to book sports turfs online, providing a convenient and efficient solution for both turf owners and players.",
     tags: [
       {
-        name: "react",
+        name: "python",
         color: "blue-text-gradient",
       },
       {
@@ -210,12 +210,12 @@ const projects = [
         color: "white-text-gradient",
       },
       {
-        name: "node",
-        color: "pink-text-gradient",
+        name: "JavaScript",
+        color: "orange-text-gradient",
       },
       {
-        name: "mongodb",
-        color: "green-text-gradient",
+        name: "css",
+        color: "yellow-text-gradient",
       },
  
     ],
